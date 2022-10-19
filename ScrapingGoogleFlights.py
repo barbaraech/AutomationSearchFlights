@@ -21,15 +21,11 @@ driver_path = 'C:\\Users\\BARBARA\\Desktop\\AutomationSearchFlights\\chromedrive
 driver = webdriver.Chrome(driver_path, chrome_options=options)
 
 #Inicia navegador
-driver.get('https://www.google.com/flights?hl=es')
+driver.get('https://www.latamairlines.com/cl/es')
 
 #Click en ida/vuelta
 #en 5 seg si no encuentra elemento se detiene programa
 WebDriverWait(driver, 5)\
-    .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-    'button.VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-Bz112c-UbuQg VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe LQeN7 BobFtf'.replace(' ','.'))))\
+    .until(EC.element_to_be_clickable((By.ID,
+    'btnTripTypeCTA')))\
         .click()
-
-#Click en dropdown 
-WebDriverWait(driver, 5)\
-    .until(EC.element_to_be_clickable((By.XPATH,"//li[text()='Solo ida']"))).click()
