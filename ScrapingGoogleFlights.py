@@ -29,3 +29,46 @@ WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.ID,
     'btnTripTypeCTA')))\
         .click()
+
+#Click en ida/vuelta
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.ID,
+    'btnTripType0')))\
+        .click()
+
+#Click en Ingresa Origen
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.ID,
+    'txtInputOrigin_field')))\
+        .click()
+
+#escribe en Ingresa Origen
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+    'input#txtInputOrigin_field')))\
+    .send_keys('Santiago de Chile, SCL - Chile')
+
+#click en origen escrito
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.ID,
+    'btnItemAutoComplete_0')))\
+        .click()
+
+#click en Ingresa Destino
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.ID,
+    'txtInputDestination_field')))\
+        .click()
+
+#escribe en Ingresa Destino
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+    'input#txtInputOrigin_field')))\
+    .send_keys('Auckland, AKl - Nueva Zelandia')
+
+#click en Destino
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.ID,
+    'btnItemAutoComplete_0')))\
+        .click()
+
