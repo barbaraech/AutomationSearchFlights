@@ -54,6 +54,8 @@ WebDriverWait(driver, 5)\
     'btnItemAutoComplete_0')))\
         .click()
 
+time.sleep(2)
+
 #click en Ingresa Destino
 WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.ID,
@@ -63,7 +65,7 @@ WebDriverWait(driver, 5)\
 #escribe en Ingresa Destino
 WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-    'input#txtInputOrigin_field')))\
+    'input#txtInputDestination_field')))\
     .send_keys('Auckland, AKl - Nueva Zelandia')
 
 #click en Destino
@@ -71,4 +73,3 @@ WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.ID,
     'btnItemAutoComplete_0')))\
         .click()
-
