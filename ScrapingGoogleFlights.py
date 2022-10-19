@@ -29,3 +29,7 @@ WebDriverWait(driver, 5)\
     .until(EC.element_to_be_clickable((By.CSS_SELECTOR,
     'button.VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-INsAgc VfPpkd-LgbsSe-OWXEXe-Bz112c-UbuQg VfPpkd-LgbsSe-OWXEXe-dgl2Hf Rj2Mlf OLiIxf PDpWxe LQeN7 BobFtf'.replace(' ','.'))))\
         .click()
+
+#Click en dropdown 
+WebDriverWait(driver, 5)\
+    .until(EC.element_to_be_clickable((By.XPATH,"//li[text()='Solo ida']"))).click()
